@@ -1,0 +1,11 @@
+[Unit]
+Description=Endlessh
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+ExecStart=/usr/local/bin/endlessh-go -enable_prometheus
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
